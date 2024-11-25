@@ -1,0 +1,77 @@
+# Trading parameters
+symbol: 'HMSTR/USDT'
+timeframe: '1m'
+initial_balance: 10  # USDT
+
+# API Configuration
+api:
+  key: ${API_KEY}
+  secret: ${API_SECRET}
+
+# Simulation mode
+simulation_mode: false
+
+# Risk management
+max_position_size: 0.1  # 10% of portfolio
+stop_loss_pct: 0.02  # 2% stop loss
+take_profit_pct: 0.05  # 5% take profit
+
+# Optimization
+optimization_interval: 24  # hours
+optimization_days: 30  # days to use for optimization
+
+# Logging
+log_level: 'INFO'
+log_file: 'trading_bot.log'
+
+# Strategy parameters (initial values, will be optimized)
+strategy_params:
+  sma_short: 10
+  sma_long: 30
+  rsi_period: 14
+  rsi_overbought: 70
+  rsi_oversold: 30
+
+# Backtesting
+backtest_start_date: '2023-01-01'
+backtest_end_date: '2023-06-30'
+
+# Performance metrics
+sharpe_ratio_risk_free_rate: 0.02  # 2% risk-free rate for Sharpe ratio calculation
+
+# Machine Learning
+ml_config:
+  model_type: 'RandomForest'
+  train_test_split: 0.8
+  features:
+    - 'close'
+    - 'volume'
+    - 'rsi'
+    - 'macd'
+    - 'bollinger_bands'
+
+# Sentiment Analysis
+sentiment_config:
+  sources:
+    - 'twitter'
+    - 'reddit'
+    - 'news'
+  keywords:
+    - 'crypto'
+    - 'bitcoin'
+    - 'ethereum'
+    - 'HMSTR'
+
+# Advanced Trading
+portfolio_rebalance_interval: 24  # hours
+max_assets: 5  # Maximum number of assets to hold simultaneously
+correlation_threshold: 0.7  # Threshold for considering assets correlated
+
+# Exchange
+exchange: 'binance'
+order_type: 'market'  # Options: 'market', 'limit'
+
+# Trading loop
+trading_loop:
+  interval: 60  # seconds
+  error_sleep_time: 300  # seconds

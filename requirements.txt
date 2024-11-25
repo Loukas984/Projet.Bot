@@ -1,0 +1,10 @@
+
+ccxt
+pandas
+numpy
+scikit-learn
+matplotlib
+ta
+python-dotenv
+tenacity
+statsmodels
